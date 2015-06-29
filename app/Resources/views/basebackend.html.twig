@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+
+<!--[if IE 8]> <html lang="en" class="ie8 no-js"> <![endif]-->
+<!--[if IE 9]> <html lang="en" class="ie9 no-js"> <![endif]-->
+<!--[if !IE]><!--> <html lang="en" class="no-js"> <!--<![endif]-->
+
+<head>
+    <meta charset="utf-8"/>
+    <title>Login Project</title>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+    <meta http-equiv="Content-type" content="text/html; charset=utf-8">
+    <meta content="" name="description"/>
+    <meta content="" name="author"/>
+
+    <!-- Fonts START -->
+    <link href="http://fonts.googleapis.com/css?family=Open+Sans:400,300,600,700&subset=all" rel="stylesheet" type="text/css">
+        <!-- Fonts END -->
+    {% block stylesheets %}
+        {% stylesheets filter='cssrewrite'
+        'assets/global/plugins/font-awesome/css/font-awesome.min.css'
+        'assets/global/plugins/simple-line-icons/simple-line-icons.min.css'
+        'assets/global/plugins/bootstrap/css/bootstrap.min.css'
+        'assets/global/plugins/uniform/css/uniform.default.css'
+        'assets/global/plugins/bootstrap-switch/css/bootstrap-switch.min.css'
+        'assets/global/plugins/bootstrap-daterangepicker/daterangepicker-bs3.css'
+        'assets/global/plugins/fullcalendar/fullcalendar.min.css'
+        'assets/global/plugins/jqvmap/jqvmap/jqvmap.css'
+        'assets/global/css/components.css'
+        'assets/global/css/plugins.css'
+        'assets/admin/layout2/css/layout.css'
+        'assets/admin/layout2/css/themes/grey.css'
+        'assets/admin/layout2/css/custom.css'
+        'assets/admin/pages/css/tasks.css'
+        %}
+
+        <link rel="stylesheet" href="{{ asset_url }}"/>
+        {% endstylesheets %}
+    {% endblock %}
+    <link rel="shortcut icon" href="favicon.ico"/>
+
+</head>
+
+<body class="page-boxed page-header-fixed page-sidebar-closed-hide-logo page-container-bg-solid page-sidebar-closed-hide-logo">
+
+{{ include('headerbackend.html.twig')}}
+<div class="clearfix">
+</div>
+
+<div class="container">
+
+    <div class="page-container">
+
+        {{ include('sidebarbackend.html.twig')}}
+
+        <div class="page-content-wrapper">
+            <div class="page-content">
+                {% block body %}{% endblock %}
+            </div>
+        </div>
+    </div>
+</div>
+{% block javascriptBlock %}
+    {% javascripts
+    'assets/global/plugins/jquery.min.js'
+    'assets/global/plugins/jquery-migrate.min.js'
+    'assets/global/plugins/jquery-ui/jquery-ui-1.10.3.custom.min.js'
+    'assets/global/plugins/bootstrap/js/bootstrap.min.js'
+    'assets/global/plugins/bootstrap-hover-dropdown/bootstrap-hover-dropdown.min.js'
+    'assets/global/plugins/datatables/media/js/jquery.dataTables.min.js'
+    'assets/global/plugins/datatables/plugins/bootstrap/dataTables.bootstrap.js'
+    'assets/global/plugins/jquery-slimscroll/jquery.slimscroll.min.js'
+    'assets/global/plugins/jquery.blockui.min.js'
+    'assets/global/plugins/moment.min.js'
+    'assets/global/plugins/jquery.cokie.min.js'
+    'assets/global/plugins/uniform/jquery.uniform.min.js'
+    'assets/global/plugins/bootstrap-switch/js/bootstrap-switch.min.js'
+    'assets/frontend/layout/scripts/layout.js'
+    'assets/global/scripts/metronic.js'
+    'assets/admin/pages/scripts/index.js'
+    'assets/admin/pages/scripts/tasks.js'
+    'assets/admin/layout2/scripts/layout.js'
+    'assets/global/scripts/datatable.js'
+    'assets/admin/pages/scripts/ecommerce-orders-view.js'
+    %}
+    <script type="text/javascript" src="{{ asset_url }}"></script>
+
+    {% endjavascripts %}
+{% endblock %}
+<script type="text/javascript">
+    jQuery(document).ready(function () {
+        {% block documentReady %}
+        Metronic.init();
+        Layout.init();
+        Index.init();
+        Tasks.initDashboardWidget();
+        {% endblock %}
+    });
+</script>
+
+
+</body>
+
+<html/>
+

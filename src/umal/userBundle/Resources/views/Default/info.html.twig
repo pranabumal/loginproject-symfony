@@ -1,0 +1,54 @@
+{% extends '::basebackend.html.twig' %}
+
+{% block body %}
+	<div class="portlet blue-hoki box">
+		<div class="portlet-title">
+			<div class="caption">
+				<i class="fa fa-cogs"></i>User Information
+			</div>
+			<div class="actions">
+				<a href="{{ path('user_edit', {'id':  user.id }) }}" class="btn btn-default btn-sm">
+					<i class="fa fa-pencil"></i> Edit </a>
+			</div>
+		</div>
+
+		<div class="portlet-body">
+				<div class="row static-info">
+					<div class="col-md-5 name">
+						First Name:
+					</div>
+					<div class="col-md-7 value">
+						{{ user.firstname }}
+					</div>
+				</div>
+				<div class="row static-info">
+					<div class="col-md-5 name">
+						Last Name:
+					</div>
+					<div class="col-md-7 value">
+						{{ user.lastname }}
+					</div>
+				</div>
+				<div class="row static-info">
+					<div class="col-md-5 name">
+						Email:
+					</div>
+					<div class="col-md-7 value">
+						{{ user.email }}
+					</div>
+				</div>
+				<div class="row static-info">
+					<div class="col-md-5 name">
+						User Name:
+					</div>
+					<div class="col-md-7 value">
+						{{ user.username }}
+					</div>
+				</div>
+			</div>
+		</div>
+
+
+
+{% endblock %}
+

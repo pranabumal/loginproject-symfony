@@ -1,0 +1,69 @@
+{% extends '::basebackend.html.twig' %}
+
+ {% block body %}
+            <div class="portlet blue-hoki box">
+	<div class="portlet-title">
+		<div class="caption">
+			<i class="fa fa-cogs"></i>User List Table
+		</div>
+	</div>
+
+        </div>
+        <div class="portlet-body">
+            <div class="table-scrollable">
+                <table class="table table-condensed table-hover">
+                    <thead>
+                    <tr>
+                        <th>
+                           #
+                        </th>
+                        <th>
+                            First Name
+                        </th>
+                        <th>
+                            Last Name
+                        </th>
+                        <th>
+                            Email
+                        </th>
+                        <th>
+                            User ID
+                        </th>
+                        <th>
+                            Username
+                        </th>
+                        <th>
+                            Edit
+                        </th>
+                        <th>
+                            Delete
+                        </th>
+                    </tr>
+                    </thead>
+                    <tbody>
+                    {% set myVal = 1 %}
+        {% for user in users %}
+
+            {% if user.username !=  app.session.get("username")  %}
+            <tr>
+                <td>{{ myVal }}</td>
+                <td>{{ user.firstname }}</td>
+                <td>{{ user.lastname }}</td>
+                <td>{{ user.email }}</td>
+                <td>{{ user.id }}</td>
+                <td>{{ user.username }}</td>
+                <td><a href="{{ path('user_edit', {'id':  user.id }) }}">Edit</a></td>
+                <td><a href="{{ path('user_delete', {'id':  user.id }) }}">Delete</a></td>
+            </tr>
+                {%   set myVal = myVal + 1 %}
+            {% endif %}
+
+        {% endfor %}
+                    </tbody>
+                </table>
+            </div>
+        </div>
+
+    <!-- END CONDENSED TABLE PORTLET-->
+
+{% endblock %}

@@ -1,0 +1,10 @@
+fontend:
+    resource: "@FontendBundle/Resources/config/routing.yml"
+    prefix:   /
+
+
+user:
+    resource: "@userBundle/Resources/config/routing.yml"
+    prefix:   /
+
+

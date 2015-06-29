@@ -1,0 +1,3 @@
+fontend_homepage:
+    path:     /
+    defaults: { _controller: FontendBundle:Default:index }

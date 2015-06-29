@@ -1,0 +1,24 @@
+user_homepage:
+    path:     /login
+    defaults: { _controller: userBundle:Default:login }
+
+user_signup:
+    path:     /signup
+    defaults: { _controller: userBundle:Default:signup }
+
+user_info:
+        path:     /info
+        defaults: { _controller: userBundle:Default:info }
+log_out:
+     path:    /logout
+     defaults: { _controller: userBundle:Default:logout }
+user_edit:
+     path:   /edit/{id}
+     defaults: { _controller: userBundle:Default:edit }
+
+user_list:
+    path:   /user_list
+    defaults: { _controller: userBundle:Default:list}
+user_delete:
+    path:    /user_delete/{id}
+    defaults: {_controller:userBundle:Default:delete}

@@ -1,0 +1,26 @@
+{% extends 'userBundle:Default:index.html.twig' %}
+{% block stylesheets %}
+    <head>
+        <meta charset="utf-8">
+        <title>Fullscreen Responsive Register Template</title>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta name="description" content="">
+        <meta name="author" content="">
+
+        <!-- CSS -->
+        <link rel='stylesheet' href='http://fonts.googleapis.com/css?family=PT+Sans:400,700'>
+        <link rel='stylesheet' href='http://fonts.googleapis.com/css?family=Oleo+Script:400,700'>
+        <link rel="stylesheet"  href="{{ asset('bundles/user/css/bootstrap.min.css') }}">
+        <link rel="stylesheet" href="{{ asset('bundles/user/css/style.css') }}">
+    </head>
+{% endblock %}
+{% block container %}
+    <div>
+    <a href="{{ path('user_homepage') }}" class="btnLogin">Login</a>
+    </div>
+    <div class="flash-message" align="center" style="font-size: large; margin-top: 5%"  >
+        <h1>
+           Login Error
+       </h1>
+    </div>
+{% endblock %}

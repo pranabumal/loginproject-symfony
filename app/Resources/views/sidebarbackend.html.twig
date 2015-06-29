@@ -1,0 +1,151 @@
+
+    <!-- BEGIN SIDEBAR -->
+    <div class="page-sidebar-wrapper">
+        <!-- DOC: Set data-auto-scroll="false" to disable the sidebar from auto scrolling/focusing -->
+        <!-- DOC: Change data-auto-speed="200" to adjust the sub menu slide up/down speed -->
+        <div class="page-sidebar navbar-collapse collapse">
+            <!-- BEGIN SIDEBAR MENU -->
+            <!-- DOC: Apply "page-sidebar-menu-light" class right after "page-sidebar-menu" to enable light sidebar menu style(without borders) -->
+            <!-- DOC: Apply "page-sidebar-menu-hover-submenu" class right after "page-sidebar-menu" to enable hoverable(hover vs accordion) sub menu mode -->
+            <!-- DOC: Apply "page-sidebar-menu-closed" class right after "page-sidebar-menu" to collapse("page-sidebar-closed" class must be applied to the body element) the sidebar sub menu mode -->
+            <!-- DOC: Set data-auto-scroll="false" to disable the sidebar from auto scrolling/focusing -->
+            <!-- DOC: Set data-keep-expand="true" to keep the submenues expanded -->
+            <!-- DOC: Set data-auto-speed="200" to adjust the sub menu slide up/down speed -->
+            <ul class="page-sidebar-menu page-sidebar-menu-hover-submenu " data-keep-expanded="false" data-auto-scroll="true" data-slide-speed="200">
+                <li class="start ">
+                    <a href="{{ path('user_info') }}">
+                        <i class="icon-home"></i>
+                        <span class="title">Dashboard</span>
+                    </a>
+                </li>
+
+                <li>
+                    <a href="javascript:">
+                        <i class="fa fa-user"></i>
+                        <span class="title">User</span>
+                        <span class="arrow "></span>
+                    </a>
+                    <ul class="sub-menu">
+                        <li>
+                            <a href="{{ path('user_list') }}">
+                                User List</a>
+                        </li>
+                        <li>
+                            <a href="#">
+                                Add User</a>
+                        </li>
+                    </ul>
+                </li>
+                <!-- BEGIN ANGULARJS LINK -->
+                <li class="tooltips" data-container="body" data-placement="right" data-html="true" data-original-title="AngularJS version demo">
+                    <a href="angularjs" target="_blank">
+                        <i class="icon-paper-plane"></i>
+						<span class="title">
+						AngularJS Version </span>
+                    </a>
+                </li>
+                <!-- END ANGULARJS LINK -->
+                <li>
+                    <a href="javascript:">
+                        <i class="icon-settings"></i>
+                        <span class="title">Form Stuff</span>
+                        <span class="arrow "></span>
+                    </a>
+                    <ul class="sub-menu">
+                        <li>
+                            <a href="form_controls.html">
+                                Form Controls</a>
+                        </li>
+                        <li>
+                            <a href="form_icheck.html">
+                                iCheck Controls</a>
+                        </li>
+
+                        <li>
+                            <a href="form_fileupload.html">
+                                Multiple File Upload</a>
+                        </li>
+                        <li>
+                            <a href="form_dropzone.html">
+                                Dropzone File Upload</a>
+                        </li>
+                    </ul>
+                </li>
+
+                <li>
+                    <a href="javascript:">
+                        <i class="icon-docs"></i>
+                        <span class="title">Pages</span>
+                        <span class="arrow "></span>
+                    </a>
+                    <ul class="sub-menu">
+                        <li>
+                            <a href="page_timeline.html">
+                                <i class="icon-paper-plane"></i>
+                                <span class="badge badge-warning">2</span>
+                                New Timeline
+                            </a>
+                        </li>
+                        <li>
+                            <a href="page_todo.html">
+                                <i class="icon-hourglass"></i>
+                                <span class="badge badge-danger">4</span>Todo</a>
+                        </li>
+                        <li>
+                            <a href="extra_profile.html">
+                                <i class="icon-user-following"></i>
+                                <span class="badge badge-success badge-roundless">new</span>New User Profile</a>
+                        </li>
+                        <li>
+                            <a href="inbox.html">
+                                <i class="icon-envelope"></i>
+                                <span class="badge badge-danger">4</span>Inbox</a>
+                        </li>
+                        <li>
+                            <a href="page_news.html">
+                                <i class="icon-eye"></i>
+                                <span class="badge badge-success">9</span>News</a>
+                        </li>
+                        <li>
+                            <a href="page_news_item.html">
+                                <i class="icon-bell"></i>
+                                News View</a>
+                        </li>
+                    </ul>
+                </li>
+                <li>
+                    <a href="javascript:">
+                        <i class="icon-present"></i>
+                        <span class="title">Extra</span>
+                        <span class="arrow "></span>
+                    </a>
+                    <ul class="sub-menu">
+                        <li>
+                            <a href="page_about.html">
+                                About Us</a>
+                        </li>
+                        <li>
+                            <a href="page_contact.html">
+                                Contact Us</a>
+                        </li>
+                        <li>
+                            <a href="extra_search.html">
+                                Search Results</a>
+                        </li>
+
+                        <li>
+                            <a href="extra_500_option1.html">
+                                500 Page Option 1</a>
+                        </li>
+                        <li>
+                            <a href="extra_500_option2.html">
+                                500 Page Option 2</a>
+                        </li>
+                    </ul>
+                </li>
+
+            </ul>
+            <!-- END SIDEBAR MENU -->
+        </div>
+    </div>
+    <!-- END SIDEBAR -->
